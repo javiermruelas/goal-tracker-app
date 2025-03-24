@@ -2,6 +2,12 @@ import { PrometheusOptions } from "@willsoto/nestjs-prometheus";
 import { WinstonModuleOptions } from "nest-winston";
 import * as winston from "winston";
 
+/**
+ * This is an example configuration for Grafana Prometheus.
+ * Prometheus can watch a server and itself and give you
+ * metrics in real-time as well as send alerts if any
+ * boundaries are triggered.
+ */
 export const prometheusConfig: PrometheusOptions = {
   defaultMetrics: {
     enabled: true,
