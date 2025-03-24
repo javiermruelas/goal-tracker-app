@@ -16,17 +16,7 @@ NestJS, React Native, Prisma, PostgresSQL
 - milestones
 - goals
 - notes
-- journal
-
-## milestones
-
-- id
-- datetime
-  - createdAt
-  - deletedAt
-  - updatedAt
-- due_date
-- goals
+- journals
 
 ## goals
 
@@ -41,16 +31,8 @@ NestJS, React Native, Prisma, PostgresSQL
 - priority (enum: LOW, MEDIUM, HIGH, CRITICAL)
 - status (enum: NOT_STARTED, IN_PROGRESS, BLOCKED, COMPLETED)
 - tags (string[])
-- content_type (enum: TASK, PROJECT, MILESTONE)
-- steps
-  - id
-  - description
-  - status
-  - related_sub_goal_id (optional, links to a sub-goal)
-- sub_goals (references to other goals)
-  - goal_id (references another goal)
-  - parent_goal_id
-  - order
+- content_type (enum: PLAIN_TEXT, MARKDOWN)
+- steps (goal[])
 
 ## note_folder
 
@@ -84,7 +66,7 @@ NestJS, React Native, Prisma, PostgresSQL
 - description
 - user_id (references users)
 
-## journal_entries
+## journals
 
 - id
 - datetime
